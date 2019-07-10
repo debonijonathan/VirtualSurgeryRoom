@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.virtualsurgeryroom.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "C:\\Users\\jonat\\Downloads\\Scuola\\ProgettoDiDiploma\\VirtualSurgeryRoom\\VirtualSurgeryRoom\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "VirtualSurgeryRoom [Testing]"
+        }
+      }
+    }
+  ]
+}
