@@ -23,7 +23,6 @@ public class PickUpScripts : MonoBehaviour
         GetComponent<Rigidbody>().useGravity = true;
         GetComponent<BoxCollider>().enabled = true;
 
-
     }
     // Update is called once per frame
     void Update()

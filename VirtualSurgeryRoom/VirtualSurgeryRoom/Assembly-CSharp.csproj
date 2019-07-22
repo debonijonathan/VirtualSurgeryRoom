@@ -251,6 +251,8 @@
      <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
      <Compile Include="Assets\Scripts\DoorScripts.cs" />
      <Compile Include="Assets\Scripts\LockedScripts.cs" />
+     <Compile Include="Assets\Scripts\menuScripts.cs" />
+     <Compile Include="Assets\Scripts\myMove.cs" />
      <Compile Include="Assets\Scripts\PaperScripts.cs" />
      <Compile Include="Assets\Scripts\PickUpScripts.cs" />
      <Compile Include="Assets\Scripts\Quest.cs" />

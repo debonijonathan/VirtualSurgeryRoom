@@ -6,23 +6,33 @@ public class QuestManagerScript : MonoBehaviour
 {
 
     public Quest quest = new Quest();
+
     public GameObject questPrintBox;
     public GameObject buttonPrefab;
     // Start is called before the first frame update
 
     public GameObject A;
+    public GameObject A1;
+
     public GameObject B;
+    public GameObject B1;
+
     public GameObject C;
     public GameObject D;
+    public GameObject D1;
+
     public GameObject E;
 
     void Start()
     {
+
+        Cursor.visible = true;
+
          QuestEvent a = quest.AddQuestEvent("Task 1","Prendere lo shampoo");
          QuestEvent b = quest.AddQuestEvent("Task 2","Lavarsi le mani");
          QuestEvent c = quest.AddQuestEvent("Task 3","Asciugarsi le mani");
          QuestEvent d = quest.AddQuestEvent("Task 4","Cambiarsi");
-         QuestEvent e = quest.AddQuestEvent("Task 5","Prendere bisturi");
+         QuestEvent e = quest.AddQuestEvent("Task 5","Entrare in Sala Operatoria");
 
         quest.AddPath(a.GetId(), b.GetId());
         quest.AddPath(b.GetId(), c.GetId());
@@ -47,9 +57,15 @@ public class QuestManagerScript : MonoBehaviour
         QuestButtonScripts button5 = b5.GetComponent<QuestButtonScripts>();
 
         A.GetComponent<QuestLocation>().Setup(this,a,button1);
+        A1.GetComponent<QuestLocation>().Setup(this,a,button1);
+
         B.GetComponent<QuestLocation>().Setup(this,b,button2);
+        B1.GetComponent<QuestLocation>().Setup(this,b,button2);
+
         C.GetComponent<QuestLocation>().Setup(this,c,button3);
         D.GetComponent<QuestLocation>().Setup(this,d,button4);
+                D1.GetComponent<QuestLocation>().Setup(this,d,button4);
+
         E.GetComponent<QuestLocation>().Setup(this,e,button5);
 
 
