@@ -8,12 +8,18 @@ public class myMove : MonoBehaviour
 
     void OnMouseDown(){
         //GetComponent<BoxCollider>().enabled = false;
+
         GetComponent<Rigidbody>().useGravity = true;
         Vector3 v = new Vector3();
+
         v.x = theDest.position.x;
         v.z = theDest.position.z;
         v.y = this.transform.position.y;
+
+        Quaternion target = Quaternion.Euler(0, 0, theDest.rotation.z);
+
         this.transform.position = v;
+        this.transform.rotation = Quaternion.Slerp(transform.rotation, target,  Time.deltaTime * 5.0f);;
 
         this.transform.parent = GameObject.Find("Destination").transform;
     }
@@ -21,7 +27,6 @@ public class myMove : MonoBehaviour
     void OnMouseUp(){
         this.transform.parent = null;
         GetComponent<Rigidbody>().useGravity = true;
-        //GetComponent<BoxCollider>().enabled = true;
 
     }
 
