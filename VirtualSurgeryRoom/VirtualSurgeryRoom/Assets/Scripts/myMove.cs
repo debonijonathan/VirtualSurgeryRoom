@@ -6,20 +6,21 @@ public class myMove : MonoBehaviour
 {
     public Transform theDest;
 
+    private float x;
+
+    void Start()
+    {
+        x = transform.eulerAngles.x;
+    }
     void OnMouseDown(){
         //GetComponent<BoxCollider>().enabled = false;
-
+ 
         GetComponent<Rigidbody>().useGravity = true;
         Vector3 v = new Vector3();
 
-        v.x = theDest.position.x;
-        v.z = theDest.position.z;
-        v.y = this.transform.position.y;
 
-        Quaternion target = Quaternion.Euler(0, 0, theDest.rotation.z);
+        transform.eulerAngles = new Vector3(x, transform.eulerAngles.y, transform.eulerAngles.z);
 
-        this.transform.position = v;
-        this.transform.rotation = Quaternion.Slerp(transform.rotation, target,  Time.deltaTime * 5.0f);;
 
         this.transform.parent = GameObject.Find("Destination").transform;
     }
@@ -28,13 +29,12 @@ public class myMove : MonoBehaviour
         this.transform.parent = null;
         GetComponent<Rigidbody>().useGravity = true;
 
+        transform.eulerAngles = new Vector3(x, transform.eulerAngles.y, transform.eulerAngles.z);
+
+
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+
 
     // Update is called once per frame
     void Update()

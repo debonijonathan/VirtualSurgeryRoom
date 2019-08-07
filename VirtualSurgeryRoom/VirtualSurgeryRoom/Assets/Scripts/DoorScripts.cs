@@ -10,7 +10,6 @@ public class DoorScripts : MonoBehaviour
 	public bool activateTrigger = false;
 
 	public GameObject textOpen;
-	public GameObject textClose;
 
 	//Animator variables
 	Animator animator;
@@ -20,12 +19,7 @@ public class DoorScripts : MonoBehaviour
 	public GameObject doorCloseSound;
 
 
-
-
-
-
 	void Start () { //what happens in the beginning of the game.
-		textClose.SetActive (false);
 		textOpen.SetActive (false);
 		T_ActivatedOpen = true;
 		T_ActivatedClose = false;
@@ -37,32 +31,27 @@ public class DoorScripts : MonoBehaviour
 		doorCloseSound.SetActive (false);
 		doorOpenSound.SetActive (false);
 
-
-
 	
 	}
 	
 
 	void Update () { //The main function wich controlls how the system will work.
 
-		if (T_ActivatedOpen == true)
+		if (T_ActivatedOpen == true){
 			T_ActivatedClose = false;
-
-		else if (T_ActivatedClose == true)
+		}else if (T_ActivatedClose == true){
 			T_ActivatedOpen = false;
+		}
 
-		if (T_ActivatedOpen && activateTrigger && Input.GetKeyDown (KeyCode.E)) //For some reaseon you can't have both E (open and close).
-			{
-				textOpen.SetActive (false);
-				textClose.SetActive (false);
-				T_ActivatedOpen = false;
-				T_ActivatedClose = true;
-				textOpen.SetActive (false);
-				textClose.SetActive (true);
-				doorOpen = true;
+		if (T_ActivatedOpen && activateTrigger && Input.GetKeyUp (KeyCode.E)){
+			textOpen.SetActive (false);
+			T_ActivatedOpen = false;
+			T_ActivatedClose = true;
+			textOpen.SetActive (true);
+			doorOpen = true;
 
-				doorOpenSound.SetActive (true);
-				doorCloseSound.SetActive (false);
+			doorOpenSound.SetActive (true);
+			doorCloseSound.SetActive (false);
 
 			if (doorOpen) 
 			{
@@ -70,24 +59,22 @@ public class DoorScripts : MonoBehaviour
 				doorController ("Open");
 			}
 				
-			}
-			else if(T_ActivatedClose && activateTrigger && Input.GetKey (KeyCode.F)) 
-			{
-				T_ActivatedOpen = true;
-				T_ActivatedClose = false;
-				textOpen.SetActive (true);
-				textClose.SetActive (false);
+		}else if(T_ActivatedClose && activateTrigger && Input.GetKeyUp (KeyCode.E)) {
+			T_ActivatedOpen = true;
+			T_ActivatedClose = false;
+			textOpen.SetActive (true);
 
-				doorCloseSound.SetActive (true);
-				doorOpenSound.SetActive (false);
-	
+			doorCloseSound.SetActive (true);
+			doorOpenSound.SetActive (false);
+
+
 			if (doorOpen) 
 			{
 				doorOpen = false;
 				doorController ("Close");
 			}
 				
-			} 
+		} 
 	}
 
 
@@ -102,7 +89,8 @@ public class DoorScripts : MonoBehaviour
 				textOpen.SetActive (true);
 
 			if((T_ActivatedClose == true))
-				textClose.SetActive (true);
+				textOpen.SetActive (true);
+
 		}
 		
 	}
@@ -113,7 +101,6 @@ public class DoorScripts : MonoBehaviour
 		if(col.gameObject.tag == "Player")
 		{
 			textOpen.SetActive (false);
-			textClose.SetActive (false);
 			activateTrigger = false;
 		}
 

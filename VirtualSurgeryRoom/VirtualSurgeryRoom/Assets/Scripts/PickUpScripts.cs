@@ -9,7 +9,7 @@ public class PickUpScripts : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
     void OnMouseDown(){
         GetComponent<BoxCollider>().enabled = false;
@@ -22,6 +22,7 @@ public class PickUpScripts : MonoBehaviour
         this.transform.parent = null;
         GetComponent<Rigidbody>().useGravity = true;
         GetComponent<BoxCollider>().enabled = true;
+
 
     }
     // Update is called once per frame
