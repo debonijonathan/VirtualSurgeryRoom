@@ -58,6 +58,7 @@
      <Compile Include="Assets\Interaction.cs" />
      <Compile Include="Assets\Scenes\LaserInput.cs" />
      <Compile Include="Assets\Scenes\MenuScripts.cs" />
+     <Compile Include="Assets\ScriptsProva.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/jonat/Downloads/Scuola/ProgettoDiDiploma/VirtualSurgeryRoom/Prova/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>

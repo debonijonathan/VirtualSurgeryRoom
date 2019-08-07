@@ -7,11 +7,13 @@ ScriptsOnlyBuild:
     - LightsScripts
     - LockedScripts
     - PaperScripts
+    - PickUpDestroyScripts
     - PickUpScripts
     - QuestButtonScripts
     - QuestLocation
     - QuestManagerScript
     - SinkScripts
+    - TurnOnScripts
     - UnityStandardAssets.Characters.FirstPerson.FirstPersonController
     - menuScripts
     - myMove
@@ -46,8 +48,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
     - UnityEditor.Graphs.AnimatorControllerTool
-    UnityEditor.TestRunner.dll:
-    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -105,9 +105,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10618}
     - Class: 114
-      Script: {instanceID: 11816}
+      Script: {instanceID: 11818}
     - Class: 114
-      Script: {instanceID: 12318}
+      Script: {instanceID: 12320}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -248,35 +248,39 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11294}
     - Class: 114
-      Script: {instanceID: 11436}
+      Script: {instanceID: 11338}
     - Class: 114
-      Script: {instanceID: 11508}
+      Script: {instanceID: 11438}
     - Class: 114
-      Script: {instanceID: 11538}
+      Script: {instanceID: 11510}
     - Class: 114
-      Script: {instanceID: 11602}
+      Script: {instanceID: 11540}
     - Class: 114
-      Script: {instanceID: 11682}
+      Script: {instanceID: 11604}
     - Class: 114
-      Script: {instanceID: 11816}
+      Script: {instanceID: 11684}
     - Class: 114
-      Script: {instanceID: 11820}
+      Script: {instanceID: 11818}
     - Class: 114
-      Script: {instanceID: 11844}
+      Script: {instanceID: 11822}
     - Class: 114
-      Script: {instanceID: 11874}
+      Script: {instanceID: 11846}
     - Class: 114
-      Script: {instanceID: 11962}
+      Script: {instanceID: 11876}
     - Class: 114
-      Script: {instanceID: 12116}
+      Script: {instanceID: 11964}
     - Class: 114
-      Script: {instanceID: 12582}
+      Script: {instanceID: 12118}
     - Class: 114
-      Script: {instanceID: 12706}
+      Script: {instanceID: 12584}
     - Class: 114
-      Script: {instanceID: 12784}
+      Script: {instanceID: 12708}
     - Class: 114
-      Script: {instanceID: 12820}
+      Script: {instanceID: 12786}
+    - Class: 114
+      Script: {instanceID: 12814}
+    - Class: 114
+      Script: {instanceID: 12824}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -810,6 +814,18 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: UTJ.Alembic
     className: AlembicCameraParams
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.Advertisements.dll
+    namespaceName: UnityEngine.Advertisements
+    className: CallbackExecutor
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.Advertisements.dll
+    namespaceName: UnityEngine.Advertisements.Editor
+    className: Placeholder
   - hash:
       serializedVersion: 2
       Hash: 357dc9516c87a9d2caf5c0f50c455e56
@@ -1736,6 +1752,12 @@ ScriptsOnlyBuild:
     className: SteamVR_TestThrow
   - hash:
       serializedVersion: 2
+      Hash: d5b7d3433fa1ea25e63bbe36ec378dad
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PickUpDestroyScripts
+  - hash:
+      serializedVersion: 2
       Hash: 0334c4a0effc471453cf665c58f76aff
     assemblyName: Assembly-CSharp.dll
     namespaceName: UnityStandardAssets.Vehicles.Car
@@ -2474,6 +2496,12 @@ ScriptsOnlyBuild:
     className: SteamVR_Frustum
   - hash:
       serializedVersion: 2
+      Hash: c8ba7406c56250bfa6df1b3fb0ca9426
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TurnOnScripts
+  - hash:
+      serializedVersion: 2
       Hash: 8220b46879dc5e37db1b940c938f5744
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -2536,4 +2564,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/jonat/Desktop/Build/VirtualSurgeryRoom.exe
+  playerPath: C:/Users/jonat/Desktop/Consegna VR/VirtualSurgeryRoom.exe
