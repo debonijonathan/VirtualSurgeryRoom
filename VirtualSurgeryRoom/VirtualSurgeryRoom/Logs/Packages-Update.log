@@ -22,3 +22,11 @@ The following packages were added:
 The following packages were removed:
   com.unity.xr.oculus.standalone@1.36.0
   com.unity.xr.openvr.standalone@1.0.5
+
+=== Thu Aug 22 14:14:16 2019
+
+Packages were changed.
+Update Mode: resetToDefaultDependencies
+
+The following packages were removed:
+  com.unity.xr.openvr.standalone@1.0.5

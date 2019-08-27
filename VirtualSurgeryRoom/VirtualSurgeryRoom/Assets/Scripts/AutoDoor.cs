@@ -28,25 +28,21 @@ public class AutoDoor : MonoBehaviour
 
     void OnTriggerEnter(Collider col) //If you enter the trigger this will happen.
 	{
-		if(col.gameObject.tag == "Player")
-		{
+
+			Debug.Log("Collisione");
 			doorController ("Open");
 			doorCloseSound.SetActive (false);
 			doorOpenSound.SetActive (true);
-		}
 		
 	}
 
 
 	void OnTriggerExit(Collider col) //If you exit the trigger this will happen.
 	{
-		if(col.gameObject.tag == "Player")
-		{
+
 			doorController ("Close");
 			doorCloseSound.SetActive (true);
 			doorOpenSound.SetActive (false);
-		}
-
 	}
 
     void doorController(string direction) //Animator function.

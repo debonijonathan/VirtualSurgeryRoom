@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Valve.VR;
 public class TurnOnScripts : MonoBehaviour
 {
     public Material[] material;
@@ -43,13 +43,35 @@ public class TurnOnScripts : MonoBehaviour
 
     }
 
+
+    public void Enter(){
+
+                    Debug.Log("ciao");
+            if(SteamVR_Actions.default_GrabGrip.GetStateDown(SteamVR_Input_Sources.Any)){
+                Debug.Log("entra");
+                status = !status;
+                oldMaterials = rend.materials;
+                if(status){
+                    oldMaterials[nr_mat] = material[1];
+                }else{
+                    oldMaterials[nr_mat] = material[0];
+                }
+                rend.materials = oldMaterials;
+                audioData.Play(0);
+            }
+            triggered = true;
+            
+    }
+
+    public void Exit(){
+            textOpen.SetActive (false);
+            triggered = false;
+    }
     void OnTriggerEnter(Collider col) //If you enter the trigger this will happen.
 	{
 		if(col.gameObject.tag == "Player")
 		{
-		    textOpen.SetActive (true);
-
-            triggered = true;
+		    Enter();
 		}
 	}
 
@@ -57,8 +79,7 @@ public class TurnOnScripts : MonoBehaviour
 	{
 		if(col.gameObject.tag == "Player")
 		{
-            textOpen.SetActive (false);
-            triggered = false;
+            Exit();
 
 		}
 

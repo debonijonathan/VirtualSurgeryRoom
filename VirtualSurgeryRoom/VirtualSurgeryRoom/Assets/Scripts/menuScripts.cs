@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 using UnityEngine;
+using Valve.VR;
 
 public class menuScripts : MonoBehaviour
 {
@@ -12,18 +13,20 @@ public class menuScripts : MonoBehaviour
 
     public GameObject play;
     public GameObject quit;
+    public GameObject player;
     public void Update(){
-        if(Input.GetKeyDown(KeyCode.UpArrow)){
+        if(Input.GetKeyDown(KeyCode.UpArrow) || SteamVR_Actions.default_GrabGrip.GetStateDown(SteamVR_Input_Sources.Any)){
             index = 0;
             eventSystem.SetSelectedGameObject(play);
         }
-        if(Input.GetKeyDown(KeyCode.DownArrow)){
+        if(Input.GetKeyDown(KeyCode.DownArrow) || SteamVR_Actions.default_GrabPinch.GetStateDown(SteamVR_Input_Sources.Any)){
             index = 1;
             eventSystem.SetSelectedGameObject(quit);
 
         }
         
-        if(Input.GetKeyDown(KeyCode.Return)){
+        if(Input.GetKeyDown(KeyCode.Return) || SteamVR_Actions.default_Teleport.GetStateDown(SteamVR_Input_Sources.Any)){
+             Destroy(player);
             if(index == 0){
                 NewGameBtn("SampleScene");
             }else{

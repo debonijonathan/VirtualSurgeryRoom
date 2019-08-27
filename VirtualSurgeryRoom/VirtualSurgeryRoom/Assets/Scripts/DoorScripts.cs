@@ -77,20 +77,19 @@ public class DoorScripts : MonoBehaviour
 		} 
 	}
 
+	public void Enter(){
 
-														
+	}
+
+	public void Exit(){
+
+	}									
 	void OnTriggerEnter(Collider col) //If you enter the trigger this will happen.
 	{
 		if(col.gameObject.tag == "Player")
 		{
 
-			activateTrigger = true;
-			if((T_ActivatedOpen == true))
-				textOpen.SetActive (true);
-
-			if((T_ActivatedClose == true))
-				textOpen.SetActive (true);
-
+			Enter();
 		}
 		
 	}
@@ -100,8 +99,7 @@ public class DoorScripts : MonoBehaviour
 	{
 		if(col.gameObject.tag == "Player")
 		{
-			textOpen.SetActive (false);
-			activateTrigger = false;
+			Exit();
 		}
 
 	}

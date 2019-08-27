@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Valve.VR;
 
 public class ExitToMenu : MonoBehaviour
 {
@@ -11,11 +12,28 @@ public class ExitToMenu : MonoBehaviour
         
     }
 
+    public void Enter(){
+        Debug.Log("ESCI");
+        SceneManager.LoadScene("Menu");
+    }
+
+    public void Exit(){
+
+    }
+
+
     // Update is called once per frame
     void Update()
     {
         if(Input.GetKeyUp (KeyCode.Q)){
-            SceneManager.LoadScene("Menu");
+            Enter();
         }
+
+            if(SteamVR_Actions.default_GrabGrip.GetStateDown(SteamVR_Input_Sources.Any) && 
+            SteamVR_Actions.default_GrabPinch.GetStateDown(SteamVR_Input_Sources.Any)){
+                Enter();
+
+            }
+
     }
 }
