@@ -29,12 +29,26 @@ public class LightsScripts : MonoBehaviour
 
     }
 
+    public void Enter(){
+            trigger = true;
+
+            flag = !flag;
+            light.SetActive (flag);
+            audioData.Play(0);
+
+            textOpen.SetActive (true);
+    }
+
+    public void Exit(){
+            trigger = false;
+            textOpen.SetActive (false);
+    }
+
     void OnTriggerEnter(Collider col) //If you enter the trigger this will happen.
 	{
 		if(col.gameObject.tag == "Player")
 		{
-            trigger = true;
-            textOpen.SetActive (true);
+            Enter();
 
 		}
 		
@@ -45,8 +59,7 @@ public class LightsScripts : MonoBehaviour
 	{
 		if(col.gameObject.tag == "Player")
 		{
-            trigger = false;
-            textOpen.SetActive (false);
+            Exit();
 
 		}
 

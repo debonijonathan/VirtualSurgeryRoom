@@ -16,12 +16,20 @@ public class SinkScripts : MonoBehaviour
 
     }
     
+	public void Enter(){
+			water.Play(); 
+			waterSound.SetActive (true);
+	}
+
+	public void Exit(){
+			water.Stop();
+            waterSound.SetActive (false);
+	}
     void OnTriggerEnter(Collider col) //If you enter the trigger this will happen.
 	{
 		if(col.gameObject.tag == "Player")
 		{
-			water.Play(); 
-			waterSound.SetActive (true);
+			Enter();
 		}
 	}
 
@@ -29,8 +37,7 @@ public class SinkScripts : MonoBehaviour
 	{
 		if(col.gameObject.tag == "Player")
 		{
-			water.Stop();
-            waterSound.SetActive (false);
+			Exit();
 
 		}
 

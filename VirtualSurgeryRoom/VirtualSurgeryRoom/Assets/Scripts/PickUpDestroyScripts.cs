@@ -11,9 +11,18 @@ public class PickUpDestroyScripts : MonoBehaviour
     {
 
     }
+
+    public void Enter(){
+        Destroy(this.gameObject);
+    }
+
+    public void Exit(){
+        
+    }
+
     void OnMouseDown(){
 
-        Destroy(this.gameObject);
+        Enter();
     }
 
     void OnMouseUp(){

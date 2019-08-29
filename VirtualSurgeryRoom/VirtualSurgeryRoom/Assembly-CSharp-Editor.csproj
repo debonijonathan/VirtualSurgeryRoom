@@ -61,15 +61,11 @@
      <Compile Include="Assets\AssetsStore\Standard Assets\Editor\Water\Water4\SpecularLightingEditor.cs" />
      <Compile Include="Assets\AssetsStore\Standard Assets\Editor\Water\Water4\WaterBaseEditor.cs" />
      <Compile Include="Assets\AssetsStore\Standard Assets\Editor\Water\Water4\WaterEditorUtility.cs" />
-     <Compile Include="Assets\UTJ\Alembic\Editor\Exporter\AlembicExporterEditor.cs" />
-     <Compile Include="Assets\UTJ\Alembic\Editor\Importer\AlembicImporter.cs" />
-     <Compile Include="Assets\UTJ\Alembic\Editor\Importer\AlembicImporterEditor.cs" />
-     <Compile Include="Assets\UTJ\Alembic\Editor\Importer\AlembicStreamDescriptorEditor.cs" />
-     <Compile Include="Assets\UTJ\Alembic\Editor\Importer\AlembicStreamPlayerEditor.cs" />
-     <Compile Include="Assets\UTJ\Alembic\Editor\Misc\BoolDrawer.cs" />
-     <Compile Include="Assets\UTJ\Alembic\Editor\Timeline\AlembicRecorderClipEditor.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/jonat/Downloads/Scuola/ProgettoDiDiploma/VirtualSurgeryRoom/VirtualSurgeryRoom/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.TextMeshPro.Editor">
+ <HintPath>C:/Users/jonat/Downloads/Scuola/ProgettoDiDiploma/VirtualSurgeryRoom/VirtualSurgeryRoom/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
  <HintPath>C:/Users/jonat/Downloads/Scuola/ProgettoDiDiploma/VirtualSurgeryRoom/VirtualSurgeryRoom/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
@@ -80,14 +76,11 @@
  <Reference Include="Unity.CollabProxy.Editor">
  <HintPath>C:/Users/jonat/Downloads/Scuola/ProgettoDiDiploma/VirtualSurgeryRoom/VirtualSurgeryRoom/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
- <Reference Include="Unity.Analytics.DataPrivacy">
- <HintPath>C:/Users/jonat/Downloads/Scuola/ProgettoDiDiploma/VirtualSurgeryRoom/VirtualSurgeryRoom/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/jonat/Downloads/Scuola/ProgettoDiDiploma/VirtualSurgeryRoom/VirtualSurgeryRoom/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
- </Reference>
  <Reference Include="Unity.TextMeshPro">
  <HintPath>C:/Users/jonat/Downloads/Scuola/ProgettoDiDiploma/VirtualSurgeryRoom/VirtualSurgeryRoom/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Analytics.DataPrivacy">
+ <HintPath>C:/Users/jonat/Downloads/Scuola/ProgettoDiDiploma/VirtualSurgeryRoom/VirtualSurgeryRoom/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.4f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

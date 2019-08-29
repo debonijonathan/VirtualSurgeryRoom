@@ -11,18 +11,26 @@ public class PaperScripts : MonoBehaviour
         anim.enabled = false;
     }
 
+
+    public void Enter(){
+        anim.enabled = true;
+    }
+
+    public void Exit(){
+        anim.enabled = false;
+    }
     void OnTriggerEnter(Collider other){
         	
 		if(other.gameObject.tag == "Player")
 		{
-            anim.enabled = true;
+            Enter();
         }
     }
 
     void OnTriggerExit(Collider other){
         if(other.gameObject.tag == "Player")
 		{
-            anim.enabled = false;
+            Exit();
         }
     }
     // Update is called once per frame
