@@ -61,13 +61,6 @@
      <Compile Include="Assets\AssetsStore\Standard Assets\Editor\Water\Water4\SpecularLightingEditor.cs" />
      <Compile Include="Assets\AssetsStore\Standard Assets\Editor\Water\Water4\WaterBaseEditor.cs" />
      <Compile Include="Assets\AssetsStore\Standard Assets\Editor\Water\Water4\WaterEditorUtility.cs" />
-     <Compile Include="Assets\UTJ\Alembic\Editor\Exporter\AlembicExporterEditor.cs" />
-     <Compile Include="Assets\UTJ\Alembic\Editor\Importer\AlembicImporter.cs" />
-     <Compile Include="Assets\UTJ\Alembic\Editor\Importer\AlembicImporterEditor.cs" />
-     <Compile Include="Assets\UTJ\Alembic\Editor\Importer\AlembicStreamDescriptorEditor.cs" />
-     <Compile Include="Assets\UTJ\Alembic\Editor\Importer\AlembicStreamPlayerEditor.cs" />
-     <Compile Include="Assets\UTJ\Alembic\Editor\Misc\BoolDrawer.cs" />
-     <Compile Include="Assets\UTJ\Alembic\Editor\Timeline\AlembicRecorderClipEditor.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/jonat/Downloads/Scuola/ProgettoDiDiploma/VirtualSurgeryRoom/VirtualSurgeryRoom/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>

@@ -48,6 +48,8 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
     - UnityEditor.Graphs.AnimatorControllerTool
+    UnityEditor.TestRunner.dll:
+    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -79,6 +81,10 @@ ScriptsOnlyBuild:
     - Class: 48
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -324,12 +330,6 @@ ScriptsOnlyBuild:
     className: PostProcessLayer
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: LevelReset
-  - hash:
-      serializedVersion: 2
       Hash: 3800f5e3156a1e54f5c990c4e514eda1
     assemblyName: SteamVR.dll
     namespaceName: Valve.VR
@@ -340,12 +340,6 @@ ScriptsOnlyBuild:
     assemblyName: SteamVR.dll
     namespaceName: Valve.VR.InteractionSystem
     className: LinearAnimation
-  - hash:
-      serializedVersion: 2
-      Hash: 2900d303005e37591ca022235408538f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: UTJ.Alembic
-    className: AlembicStreamPlayer
   - hash:
       serializedVersion: 2
       Hash: 6adee554954584b0047fa1955f259d15
@@ -376,12 +370,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SelectionCaret
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SceneAndURLLoader
   - hash:
       serializedVersion: 2
       Hash: 1875635f70b679d36f0dc67b4b9618c1
@@ -474,12 +462,6 @@ ScriptsOnlyBuild:
     className: FirstPersonController
   - hash:
       serializedVersion: 2
-      Hash: f4dee91cb35285cae1f59a95d21d3b21
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: UTJ.Alembic
-    className: AlembicPointsRenderer
-  - hash:
-      serializedVersion: 2
       Hash: 71f7f12b8d0f4fd73590db8bcb6d453c
     assemblyName: Unity.Postprocessing.Runtime.dll
     namespaceName: UnityEngine.Rendering.PostProcessing
@@ -562,12 +544,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: UnityStandardAssets.Vehicles.Car
     className: SkidTrail
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PauseMenu
   - hash:
       serializedVersion: 2
       Hash: 98d138569dc38b8bf8400ea20da0e6f3
@@ -808,24 +784,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: UnityStandardAssets.CrossPlatformInput
     className: TiltInput
-  - hash:
-      serializedVersion: 2
-      Hash: f3aeb5bc44e3e4f1e1ba79485a5003b3
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: UTJ.Alembic
-    className: AlembicCameraParams
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: UnityEngine.Advertisements.dll
-    namespaceName: UnityEngine.Advertisements
-    className: CallbackExecutor
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: UnityEngine.Advertisements.dll
-    namespaceName: UnityEngine.Advertisements.Editor
-    className: Placeholder
   - hash:
       serializedVersion: 2
       Hash: 357dc9516c87a9d2caf5c0f50c455e56
@@ -1182,12 +1140,6 @@ ScriptsOnlyBuild:
     className: InteractableDebug
   - hash:
       serializedVersion: 2
-      Hash: 34b02846448cdc80039a1f7ff5be9912
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: UTJ.Alembic
-    className: AlembicShotAsset
-  - hash:
-      serializedVersion: 2
       Hash: 385666d964b0eabb4136cbb95125e502
     assemblyName: Assembly-CSharp.dll
     namespaceName: UnityStandardAssets.Cameras
@@ -1410,12 +1362,6 @@ ScriptsOnlyBuild:
     className: ChromaticAberration
   - hash:
       serializedVersion: 2
-      Hash: b54f8be68f6e3169d543383799d00e18
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CameraSwitch
-  - hash:
-      serializedVersion: 2
       Hash: d0f72e335ba63de49df35d5745fee637
     assemblyName: SteamVR.dll
     namespaceName: Valve.VR.InteractionSystem
@@ -1488,22 +1434,10 @@ ScriptsOnlyBuild:
     className: AxisTouchButton
   - hash:
       serializedVersion: 2
-      Hash: 92f00eb752b009c43835de935b196c6c
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: UTJ.Alembic
-    className: AlembicRecorderClip
-  - hash:
-      serializedVersion: 2
       Hash: dc0c855440d59a516315a62ef55d7fd8
     assemblyName: Assembly-CSharp.dll
     namespaceName: UnityStandardAssets._2D
     className: CameraFollow
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: UTJ.Alembic
-    className: AlembicWaitForEndOfFrame
   - hash:
       serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
@@ -1626,12 +1560,6 @@ ScriptsOnlyBuild:
     className: Displace
   - hash:
       serializedVersion: 2
-      Hash: c3d3430df9e3ea95e3e3d587961390fb
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: UTJ.Alembic
-    className: AlembicTrack
-  - hash:
-      serializedVersion: 2
       Hash: d6fc8d3165070298511ec776ea575626
     assemblyName: Unity.Postprocessing.Runtime.dll
     namespaceName: UnityEngine.Rendering.PostProcessing
@@ -1648,12 +1576,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: QuestManagerScript
-  - hash:
-      serializedVersion: 2
-      Hash: 296fe27bf6a67ad114f808be4eaa08cc
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: UnityStandardAssets.SceneUtils
-    className: ParticleSceneControls
   - hash:
       serializedVersion: 2
       Hash: fa5d069645c5f38a362924187ca1cb5d
@@ -1740,19 +1662,13 @@ ScriptsOnlyBuild:
     className: CarController
   - hash:
       serializedVersion: 2
-      Hash: 53f177eb7708eb84cb5a8c2cd71a6c40
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: UTJ.Alembic
-    className: AlembicExporter
-  - hash:
-      serializedVersion: 2
       Hash: f5f25645085257c501404a702df6e587
     assemblyName: SteamVR.dll
     namespaceName: Valve.VR.Extras
     className: SteamVR_TestThrow
   - hash:
       serializedVersion: 2
-      Hash: d5b7d3433fa1ea25e63bbe36ec378dad
+      Hash: 4efe89e2d3d94fae7f771ad9ce4e5171
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PickUpDestroyScripts
@@ -1830,12 +1746,6 @@ ScriptsOnlyBuild:
     className: RenderModel
   - hash:
       serializedVersion: 2
-      Hash: c3d3430df9e3ea95e3e3d587961390fb
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: UTJ.Alembic
-    className: AlembicRecorderTrack
-  - hash:
-      serializedVersion: 2
       Hash: 8eb3a5f0b7fd900742b16e7776e2275b
     assemblyName: SteamVR.dll
     namespaceName: Valve.VR
@@ -1888,12 +1798,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: UnityStandardAssets._2D
     className: Restarter
-  - hash:
-      serializedVersion: 2
-      Hash: 6044529815c0850359298e2f87d67d0b
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: UnityStandardAssets.SceneUtils
-    className: SlowMoButton
   - hash:
       serializedVersion: 2
       Hash: 97a580c59cad3623a01bbf5fb2d7fa93
@@ -2148,12 +2052,6 @@ ScriptsOnlyBuild:
     className: JetParticleEffect
   - hash:
       serializedVersion: 2
-      Hash: 02e6483ba585336f78a48b8cf2289aa0
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MenuSceneLoader
-  - hash:
-      serializedVersion: 2
       Hash: 279768045d861f23f3ea812bd285d1d2
     assemblyName: SteamVR.dll
     namespaceName: Valve.VR.InteractionSystem.Sample
@@ -2194,12 +2092,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ExitToMenu
-  - hash:
-      serializedVersion: 2
-      Hash: 7e6b022cd7f1c29976ca8b1a21d06265
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: UnityStandardAssets.SceneUtils
-    className: PlaceTargetWithMouse
   - hash:
       serializedVersion: 2
       Hash: ea5f9ef0dead06cc8f00444db7fd2ab0
@@ -2382,12 +2274,6 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: 9fc8509b6f279d5e1fd6b531c4a2c060
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: UTJ.Alembic
-    className: AlembicPointsCloud
-  - hash:
-      serializedVersion: 2
       Hash: 698812e8d71fd38ac0f66f7a70a25fb5
     assemblyName: Assembly-CSharp.dll
     namespaceName: UnityStandardAssets.Water
@@ -2538,12 +2424,6 @@ ScriptsOnlyBuild:
     className: PlatformerCharacter2D
   - hash:
       serializedVersion: 2
-      Hash: a1d76c94bc8d2097fecc04530bdf1c56
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: UTJ.Alembic
-    className: AlembicStreamDescriptor
-  - hash:
-      serializedVersion: 2
       Hash: 67f016b700462d665c4a07e674bfa76d
     assemblyName: SteamVR.dll
     namespaceName: Valve.VR.InteractionSystem
@@ -2564,4 +2444,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/jonat/Desktop/Consegna VR/VirtualSurgeryRoom.exe
+  playerPath: C:/Users/jonat/Desktop/ProgettoDiDiploma DEMO/Desktop/Demo/VirtualSurgeryRoom.exe

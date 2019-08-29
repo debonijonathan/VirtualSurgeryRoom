@@ -5,6 +5,7 @@ using UnityEngine;
 public class PickUpDestroyScripts : MonoBehaviour
 {
     public Transform theDest;
+    public QuestLocation quest;
 
     // Start is called before the first frame update
     void Start()
@@ -14,6 +15,7 @@ public class PickUpDestroyScripts : MonoBehaviour
     void OnMouseDown(){
 
         Destroy(this.gameObject);
+        quest.Enter();
     }
 
     void OnMouseUp(){

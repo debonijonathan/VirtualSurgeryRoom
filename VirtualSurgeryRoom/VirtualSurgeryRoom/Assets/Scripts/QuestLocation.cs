@@ -9,15 +9,19 @@ public class QuestLocation : MonoBehaviour
     public QuestEvent qEvent;
     public QuestButtonScripts qButton;
 
-    void OnTriggerEnter(Collider col) //If you enter the trigger this will happen.
-	{
-		if(col.gameObject.tag != "Player") return;
-
+    public void Enter(){
         if(qEvent.status != QuestEvent.EventStatus.CURRENT)  return;
 
         qEvent.UpdateQuestEvent(QuestEvent.EventStatus.DONE);
         qButton.UpdateButton(QuestEvent.EventStatus.DONE);
         qManager.UpdateQuestsOnCompletion(qEvent);
+    }
+
+    void OnTriggerEnter(Collider col) //If you enter the trigger this will happen.
+	{
+		if(col.gameObject.tag != "Player") return;
+
+        Enter();
 	}
     public void Setup(QuestManagerScript qm, QuestEvent qe, QuestButtonScripts qb){
         qManager = qm;

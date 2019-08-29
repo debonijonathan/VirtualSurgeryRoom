@@ -31,14 +31,17 @@ public class QuestManagerScript : MonoBehaviour
          QuestEvent a = quest.AddQuestEvent("Task 1","Prendere lo shampoo");
          QuestEvent b = quest.AddQuestEvent("Task 2","Lavarsi le mani");
          QuestEvent c = quest.AddQuestEvent("Task 3","Asciugarsi le mani");
-         QuestEvent d = quest.AddQuestEvent("Task 4","Cambiarsi");
+         QuestEvent d = quest.AddQuestEvent("Task 4","Cambiarsi le scarpe");
+         QuestEvent d1 = quest.AddQuestEvent("Task 4","Cambiarsi il camice");
+
          QuestEvent e = quest.AddQuestEvent("Task 5","Entrare in Sala Operatoria");
 
         quest.AddPath(a.GetId(), b.GetId());
         quest.AddPath(b.GetId(), c.GetId());
 
         quest.AddPath(c.GetId(), d.GetId());
-        quest.AddPath(d.GetId(), e.GetId());
+        quest.AddPath(d.GetId(), d1.GetId());
+        quest.AddPath(d1.GetId(), e.GetId());
 
         quest.BFS(a.GetId());
 
@@ -48,13 +51,15 @@ public class QuestManagerScript : MonoBehaviour
         GameObject b2 = CreateButton(b);
         GameObject b3 = CreateButton(c);
         GameObject b4 = CreateButton(d);
-        GameObject b5 = CreateButton(e);
+        GameObject b5 = CreateButton(d1);
+        GameObject b6 = CreateButton(e);
 
         QuestButtonScripts button1 = b1.GetComponent<QuestButtonScripts>();
         QuestButtonScripts button2 = b2.GetComponent<QuestButtonScripts>();
         QuestButtonScripts button3 = b3.GetComponent<QuestButtonScripts>();
         QuestButtonScripts button4 = b4.GetComponent<QuestButtonScripts>();
         QuestButtonScripts button5 = b5.GetComponent<QuestButtonScripts>();
+        QuestButtonScripts button6 = b6.GetComponent<QuestButtonScripts>();
 
         A.GetComponent<QuestLocation>().Setup(this,a,button1);
         A1.GetComponent<QuestLocation>().Setup(this,a,button1);
@@ -64,9 +69,9 @@ public class QuestManagerScript : MonoBehaviour
 
         C.GetComponent<QuestLocation>().Setup(this,c,button3);
         D.GetComponent<QuestLocation>().Setup(this,d,button4);
-                D1.GetComponent<QuestLocation>().Setup(this,d,button4);
+        D1.GetComponent<QuestLocation>().Setup(this,d1,button5);
 
-        E.GetComponent<QuestLocation>().Setup(this,e,button5);
+        E.GetComponent<QuestLocation>().Setup(this,e,button6);
 
 
 
